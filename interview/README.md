@@ -3,8 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Run npm audit fix --force
-if you run into issue with plugin react was conflicted between package.json and baseconfig
 
+if you run into issue with plugin react was conflicted between package.json and baseconfig run npm audit fix --force
 
 ## Available Scripts
 
@@ -18,33 +18,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### Change project to add pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the current project using Typescript, CSS, HTML, and UI/UX skills, create features that allow users to view, add, and edit comments.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Add **mui** to the project
+2. Create new pages/components called ***comment-form** and **comment-data**
+3. App.tsx
+   1. This page is going to hold comment-form and comment-data pages/components
+   2. On desktop - using MUI Grid, make columns 6 (comment-data) and 6 (comment-form)
+   3. On Table and Phone- make columns 12 (top | comment-data) and 12 (bottom | comment-form)
+4. comment-data Page/Component
+   1. Fetch list of comments from https://jsonplaceholder.typicode.com/comments and show the list on the component. (you can use a service to do this)
+   2. Make a clickable edit section and when user clicks this, a Modal/Dialog will open comment-form component with data already filled in from the API data.
+5. comment-form Page/Component
+   1. Create a form that accepts **name** and **email**
+   2. All fields are required
+   3. Email field validates to see if entered string is email
+   4. If fields are incorrect and/or left empty, make sure there are validation to let user know
+   5. On Submit, use a fake url to post the values (you can use the service that you made earlier) and show form results in the console.
+6. After you are done, make a pull request on Github and let us know that you are done.
