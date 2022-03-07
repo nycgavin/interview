@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Run npm audit fix --force
+if you run into issue with plugin react was conflicted between package.json and baseconfig
+
+
 ## Available Scripts
 
 In the project directory, you can run:
